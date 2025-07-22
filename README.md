@@ -1,8 +1,8 @@
-## Warp Easy Login (browser extension)
+## Farcaster (farcaster.xyz) Easy Login (browser extension)
 
-> Deprecated in favor of [farcaster-easy-login](https://github.com/andrei0x309/farcaster-easy-login) since warpcast.com was discontinued and renamed to farcaster.xyz
+This extension allows you to sign in to farcaster.xyz without having to use a mobile device and instead use your browser wallet.
 
-This extension allows you to sign in to warpcast.com without having to use a mobile device. The only requirement is to have a browser Ethereum wallet like ClearWallet or Metamask with a correct account that controls your warpcast account selected.
+When you sign to login you must sign with your custody account( the account that owns your farcaster account) in order to be able to generate an auth token and sign in.
 
 Download from Chrome-Store:
 
@@ -15,6 +15,10 @@ Download from Chrome-Store:
 ### Youtube Video (Demo)
 
 [https://www.youtube.com/watch?v=GrZIa8XdrJY](https://www.youtube.com/watch?v=GrZIa8XdrJY)
+
+### Notes
+
+- This repo is a continuation of this deprecated repo: [https://github.com/andrei0x309/warp-easy-login-browser-extension](https://github.com/andrei0x309/warp-easy-login-browser-extension)
 
 ### License
 

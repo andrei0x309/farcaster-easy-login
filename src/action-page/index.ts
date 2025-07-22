@@ -1,3 +1,4 @@
+import './tailwind.css';
 import './index.scss';
 import Main from '@/pages/main.svelte';
 import { mount } from "svelte";

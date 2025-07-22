@@ -4,10 +4,10 @@
   import { getOptions, setOptions } from '@/lib/utils'
   
  
-  let activeTab = 'main'
+  let activeTab = $state('main')
   let options: Awaited<ReturnType<typeof getOptions>>
   let theme = 'dark'
-  let isDarkTheme = false
+  let isDarkTheme = $state(false)
 
   const themeToggle = () => {
     theme = theme === 'dark' ? 'light' : 'dark'
@@ -34,15 +34,15 @@
 </script>
  
 <div class="mainbody" style="min-width: 100%">
-  <input title="theme-switch" type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" on:change={themeToggle} checked={isDarkTheme} />
+  <input title="theme-switch" type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" onchange={themeToggle} checked={isDarkTheme} />
 	<label for="themeSwitch" class="theme-switch__label">
 		<span></span>
 	</label>
   <div class="container--tabs">
     <section class="row">
       <ul class="nav nav-tabs">
-        <li class="{`${activeTab === 'main' ? 'active': ''}`}"><a on:click={() => setTab('main')}  href="#tab-1">Main</a></li>
-        <li class="{`${activeTab === 'about' ? 'active': ''}`}"><a on:click={() => setTab('about')}  href="#tab-2">About</a></li>
+        <li class="{`${activeTab === 'main' ? 'active': ''}`}"><a onclick={() => setTab('main')}  href="#tab-1">Main</a></li>
+        <li class="{`${activeTab === 'about' ? 'active': ''}`}"><a onclick={() => setTab('about')}  href="#tab-2">About</a></li>
       </ul>
       <div class="tab-content">
         <MainTab isActive={activeTab === 'main'} />

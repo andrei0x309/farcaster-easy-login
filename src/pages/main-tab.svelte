@@ -1,11 +1,17 @@
 
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
     import Alert from '@/components/alert.svelte'
 
-    export let isActive = false;
+  interface Props {
+    isActive?: boolean;
+  }
+
+  let { isActive = false }: Props = $props();
     const targetUrl = 'warpcast.com'
     let isVerifyingProxy = false;
-    let alert: any & { showAlert: (msg: string, type: 'warning' | 'success' | 'danger' | 'info') => void };
+    let alert: any & { showAlert: (msg: string, type: 'warning' | 'success' | 'danger' | 'info') => void } = $state();
 
     const promptForSignIn = async () => {
 
@@ -40,8 +46,8 @@
 
     }
 
-    $: {
-    }
+    run(() => {
+    });
    
 
 </script>
@@ -80,11 +86,9 @@
       </li>
     </ul>
 
-    <button on:click={
-      () => {
+    <button onclick={() => {
         promptForSignIn();
-      }
-  } class="btn btn-green" style="margin-bottom: 1rem;" id="btnProxyStart">Request Wallet Login</button>
+      }} class="btn btn-green" style="margin-bottom: 1rem;" id="btnProxyStart">Request Wallet Login</button>
 
   </div>
 

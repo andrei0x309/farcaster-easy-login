@@ -9,7 +9,7 @@
         container.prepend(script)
         script.addEventListener('load', () => { container.removeChild(script) } )
     } catch (error) {
-      console.error('Faild to inject warp easy long listner.', error);
+      console.error('Faild to inject farcaster easy login listner.', error);
     }
   })()
 

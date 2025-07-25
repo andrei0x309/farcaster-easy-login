@@ -1,21 +1,23 @@
 {
-  "name": "warp-easy-login-browser-extension",
-  "description": "This extension allows you to sign in to warpcast.com without having to use a mobile device.",
+  "name": "farcaster-easy-login",
+  "description": "This extension allows you to sign in to farcaster.xyz without having to use a mobile device.",
   "private": true,
   "version": "1.0.2",
   "type": "module",
   "scripts": {
-    "compose-inject": "yarn tsx ./scripts/compose-inject.ts",
-    "compile-inject": "tsc --outFile ./src/client/inject.js ./src/client/inject-composed.ts",
+    "compile-inject": "bun build src/client/inject.ts --minify --target=browser --format iife --outdir src/client/",
+    "content": "bun build src/client/content.ts --minify --target=browser --format iife --outdir src/client/",
     "dev": "vite",
-    "build": "yarn compose-inject && yarn compile-inject && vite build",
+    "post-build": "bun run ./scripts/post-build.ts",
+    "release": "bun run ./scripts/version-release.ts",
+    "build": "bun run compile-inject && bun run content && vite build && bun run post-build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "pretty": "prettier --write .",
-    "release": "yarn config set version-tag-prefix warp-easy-login-browser-extension@v &&  yarn config set version-git-message 'warp-easy-login-browser-extension@v%s' && yarn version --patch && yarn postversion",
     "postversion": "git push",
-    "create-release": "tsx ./scripts/create-release.ts",
-    "pub": "yarn build && yarn release && yarn create-release"
+    "create-release": "bun run ./scripts/create-release.ts",
+    "pub": "bun run build && bun run release && bun run ./scripts/create-release.ts",
+    "only-pub": "bun run build && bun run ./scripts/create-release.ts"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.3",

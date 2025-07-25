@@ -44,7 +44,7 @@
         <li class="{`${activeTab === 'main' ? 'active': ''}`}"><a onclick={() => setTab('main')}  href="#tab-1">Main</a></li>
         <li class="{`${activeTab === 'about' ? 'active': ''}`}"><a onclick={() => setTab('about')}  href="#tab-2">About</a></li>
       </ul>
-      <div class="tab-content">
+      <div class="tab-content p-2">
         <MainTab isActive={activeTab === 'main'} />
         <AboutTab isActive={activeTab === 'about'} />
 
@@ -54,6 +54,7 @@
 </div>
 
 <style lang="scss">
+@use "sass:color";
 
 // Toggle switch
 .theme-switch__input,
@@ -61,6 +62,7 @@
 	position: absolute;
   right: 30px;
   top: 10px;
+  cursor: pointer;
 }
 
 .theme-switch__input {
@@ -73,7 +75,7 @@
 		}
 		
 		+ .theme-switch__label span::after {
-			background-color: lighten(lightBlue, 10%);
+			background-color: color.scale(lightBlue, $lightness: 47.6635514019%) color.adjust(lightBlue, $lightness: 10%);
 		}
 	}
 }

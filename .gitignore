@@ -31,3 +31,4 @@ releases
 
 /src/client/inject.js
 /src/client/inject-composed.ts
+/src/client/content.js

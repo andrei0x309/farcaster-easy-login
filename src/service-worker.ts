@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.notifications.create('auth-success', {
         type: 'basic',
         iconUrl,
-        title: 'Warp Easy Login',
+        title: 'Farcaster Easy Login',
         message: 'Authentication successful!\nMessage ID: ' + messageId
       });
       break;
@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.notifications.create('no-wallet', {
         type: 'basic',
         iconUrl,        
-        title: 'Warp Easy Login',
+        title: 'Farcaster Easy Login',
         message: 'No wallet found, please install ClearWallet or MetaMask or other supported wallet.\nMessage ID: ' + messageId
       });
       break;
@@ -30,7 +30,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.notifications.create('sig-denied', {
         type: 'basic',
         iconUrl,
-        title: 'Warp Easy Login',
+        title: 'Farcaster Easy Login',
         message: 'Signature denied, please sign the message to authenticate.\nMessage ID: ' + messageId
       });
       break;
@@ -38,8 +38,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.notifications.create('no-auth-token', {
         type: 'basic',
         iconUrl,
-        title: 'Warp Easy Login',
-        message: 'Failed to generate auth token, please sign with the address that owns your FID, if you don\'t have that address, import it to your wallet from warpcast.\nMessage ID: ' + messageId
+        title: 'Farcaster Easy Login',
+        message: 'Failed to generate auth token, please sign with the address that owns your FID, if you don\'t have that address, import it to your wallet from farcaster app.\nMessage ID: ' + messageId
       });
       break;
     default:

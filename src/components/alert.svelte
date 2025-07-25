@@ -46,7 +46,7 @@
     <div id="exAlertBox" class="{`alert ${type[alertType]}`}">
       <button onclick={() => {
           closeAlert();
-        }} id="closeAlertBtn" type="button" class="close-alert"><i class="icss-x"></i></button>
+        }} aria-label="close" id="closeAlertBtn" type="button" class="close-alert"><i class="icss-x"></i></button>
       <i class="icss-exclamation-circle"></i>&nbsp;
       <span style="line-height: 2em; display: inline-table" id="alertMsg">{alertMsg}</span>
     </div>

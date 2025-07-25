@@ -29,11 +29,13 @@ async function main() {
   const packageJsonPath = resolve('./package.json');
   const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
   packageJson.version = nextVersion;
+  const pkgName = packageJson.name;
+
   writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
   // 3. Commit changes
   execSync(`git add .`);
-  execSync(`git commit -m "farcaster-easy-login@v${nextVersion}"`);
+  execSync(`git commit -m "${pkgName}@v${nextVersion}"`);
 
   // 4. Create and push tag
   execSync(`git tag v${nextVersion}`);

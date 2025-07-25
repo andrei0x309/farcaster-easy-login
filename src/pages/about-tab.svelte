@@ -10,8 +10,8 @@
 
 <div id="tab-2" class="{`tab-pane ${isActive ? 'active' : ''}`} dark:text-gray-100 text-gray-800" style="font-size: 1rem; text-align: left;">
     <h2 class="mb-0 text-lg font-semibold text-gray-900 dark:text-white text-[1.05rem]">Source Code</h2>
-    <p class="text-sm text-gray-600 dark:text-gray-400 px-4 mb-2">This extension allows you to login at <a style="color: blueviolet;" onclick={() => { navigdateTo('https://farcaster.xyz')}} href="#link1">farcaster.xyz</a> without needing a mobile device, and using only your custody account imported in your EVM wallet of choice.</p>
-    <p class="text-sm text-gray-600 dark:text-gray-400 px-4">This extension is open-source and the source can be found on GitHub here: <a style="color: blueviolet;" onclick={() => {
+    <p class="text-sm text-gray-600 dark:text-gray-400 px-4 mb-2">This extension allows you to log in to <a style="color: blueviolet;" onclick={() => { navigdateTo('https://farcaster.xyz')}} href="#link1">farcaster.xyz</a> without needing a mobile device, and using only your custody account imported into your EVM wallet of choice.</p>
+    <p class="text-sm text-gray-600 dark:text-gray-400 px-4">This extension is open-source, and the source can be found on GitHub here: <a style="color: blueviolet;" onclick={() => {
     navigdateTo('https://github.com/andrei0x309/farcaster-easy-login')
     }} href="#link2">Repo Link</a></p>
 

@@ -10,11 +10,11 @@ Download from Chrome-Store:
 
 ### Screenshot
 
-![screenshot](/screen_1.png)
+![screenshot](/screen_1_A1F7.png)
 
-### Youtube Video (Demo)
+### Demo Video Clip
 
-[https://www.youtube.com/watch?v=GrZIa8XdrJY](https://www.youtube.com/watch?v=GrZIa8XdrJY)
+https://github.com/user-attachments/assets/1719a813-6454-4475-9f40-bc68908580a9
 
 ### Notes
 

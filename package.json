@@ -2,7 +2,7 @@
   "name": "farcaster-easy-login",
   "description": "This extension allows you to sign in to farcaster.xyz without having to use a mobile device.",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "compile-inject": "bun build src/client/inject.ts --minify --target=browser --format iife --outdir src/client/",

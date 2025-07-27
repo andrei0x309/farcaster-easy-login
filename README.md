@@ -6,7 +6,7 @@ When you sign to login you must sign with your custody account( the account that
 
 Download from Chrome-Store:
 
-[https://chromewebstore.google.com/detail/warp-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak](https://chromewebstore.google.com/detail/warp-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak)
+[https://chromewebstore.google.com/detail/farcaster-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak?authuser=0&hl=en](https://chromewebstore.google.com/detail/farcaster-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak?authuser=0&hl=en)
 
 ### Screenshot
 
